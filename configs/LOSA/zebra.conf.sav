@@ -1,0 +1,35 @@
+!
+! Zebra configuration saved from vty
+!   2018/04/20 14:19:36
+!
+hostname G15_LOSA
+password G15_LOSA
+log file /root/logs/zebra_G15_LOSA.log
+!
+interface ebgp
+!
+interface gre0
+!
+interface gretap0
+!
+interface host
+ ip address 15.108.0.2/24
+!
+interface hous
+ ip address 15.0.10.2/24
+!
+interface lo
+!
+interface salt
+ ip address 15.0.11.2/24
+!
+interface seat
+ ip address 15.0.13.1/24
+!
+interface test
+!
+ip forwarding
+!
+!
+line vty
+!

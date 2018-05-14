@@ -1,0 +1,39 @@
+!
+! Zebra configuration saved from vty
+!   2018/04/20 14:19:36
+!
+hostname G15_LOSA
+password G15_LOSA
+log file /root/logs/ospfd_G15_LOSA.log
+!
+!
+!
+interface ebgp
+!
+interface gre0
+!
+interface gretap0
+!
+interface host
+!
+interface hous
+ ip ospf cost 1705
+!
+interface lo
+!
+interface salt
+ ip ospf cost 1303
+!
+interface seat
+ ip ospf cost 1342
+!
+interface test
+!
+router ospf
+ network 15.0.10.0/24 area 0.0.0.0
+ network 15.0.11.0/24 area 0.0.0.0
+ network 15.0.13.0/24 area 0.0.0.0
+ network 15.108.0.0/24 area 0.0.0.0
+!
+line vty
+!
