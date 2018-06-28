@@ -117,6 +117,9 @@ setCost HOUS losa 1705
 setCost HOUS kans 818
 setCost HOUS atla 1385
 
+#debug vm
+setIP HOUS mgt "15.0.199.1/24"
+
 #CHIC
 echo "CHIC"
 setHost CHIC-host chic "15.102.0.1/24" "15.102.0.2"
