@@ -1,0 +1,32 @@
+!
+! Zebra configuration saved from vty
+!   2018/06/14 15:05:54
+!
+hostname G15_SALT
+password G15_SALT
+log file /root/logs/zebra_G15_SALT.log
+!
+interface ebgp
+!
+interface gre0
+!
+interface gretap0
+!
+interface host
+ ip address 15.107.0.2/24
+!
+interface kans
+ ip address 15.0.9.2/24
+!
+interface lo
+!
+interface losa
+ ip address 15.0.11.1/24
+!
+interface seat
+ ip address 15.0.12.1/24
+!
+!
+!
+line vty
+!

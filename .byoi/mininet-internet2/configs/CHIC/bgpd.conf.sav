@@ -1,0 +1,20 @@
+!
+! Zebra configuration saved from vty
+!   2018/06/14 15:06:07
+!
+hostname G15_CHIC
+password G15_CHIC
+log file /root/logs/bgpd_G15_CHIC.log
+!
+router bgp 15
+ bgp router-id 15.102.0.2
+ neighbor internal peer-group
+ neighbor internal remote-as 15
+ neighbor internal next-hop-self
+!
+ address-family ipv6
+ exit-address-family
+ exit
+!
+line vty
+!

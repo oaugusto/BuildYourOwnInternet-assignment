@@ -1,0 +1,20 @@
+!
+! Zebra configuration saved from vty
+!   2018/06/14 15:05:18
+!
+hostname G15_ATLA
+password G15_ATLA
+log file /root/logs/bgpd_G15_ATLA.log
+!
+router bgp 15
+ bgp router-id 15.104.0.2
+ neighbor internal peer-group
+ neighbor internal remote-as 15
+ neighbor internal next-hop-self
+!
+ address-family ipv6
+ exit-address-family
+ exit
+!
+line vty
+!

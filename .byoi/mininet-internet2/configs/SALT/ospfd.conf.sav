@@ -1,0 +1,37 @@
+!
+! Zebra configuration saved from vty
+!   2018/06/14 15:05:54
+!
+hostname G15_SALT
+password G15_SALT
+log file /root/logs/ospfd_G15_SALT.log
+!
+!
+!
+interface ebgp
+!
+interface gre0
+!
+interface gretap0
+!
+interface host
+!
+interface kans
+ ip ospf cost 1330
+!
+interface lo
+!
+interface losa
+ ip ospf cost 1303
+!
+interface seat
+ ip ospf cost 913
+!
+router ospf
+ network 15.0.9.0/24 area 0.0.0.0
+ network 15.0.11.0/24 area 0.0.0.0
+ network 15.0.12.0/24 area 0.0.0.0
+ network 15.107.0.0/24 area 0.0.0.0
+!
+line vty
+!
