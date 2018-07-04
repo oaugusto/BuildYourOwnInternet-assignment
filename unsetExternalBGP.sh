@@ -5,7 +5,7 @@ setIP() {
     echo "vtysh \
         -c \"conf t\" \
         -c \"interface $2\" \
-        -c \"ip address $3\"" | ./bash-in.sh $1
+        -c \"no ip address $3\"" | ./bash-in.sh $1
 }
 
 
@@ -13,14 +13,14 @@ setPeer() {
     echo "vtysh \
         -c \"conf t\" \
 	-c \"router bgp 15\" \
-        -c \"neighbor $2 remote-as $3\"" | ./bash-in.sh $1
+        -c \"no neighbor $2 remote-as $3\"" | ./bash-in.sh $1
 }
 
 publish() {
     echo "vtysh \
         -c \"conf t\" \
 	-c \"router bgp 15\" \
-        -c \"network $2\"" | ./bash-in.sh $1
+        -c \"no network $2\"" | ./bash-in.sh $1
 }
 
 #SEAT
